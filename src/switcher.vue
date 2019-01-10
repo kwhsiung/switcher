@@ -11,7 +11,9 @@ export default {
   props: {
     options: {
       type: Array,
-      default: ['', ''],
+      default () {
+        return ['as', 'aaas']
+      },
       validator (value) {
         return value.length === 2
       }
@@ -47,6 +49,7 @@ export default {
   display flex
   justify-content space-around
   align-items center
+  user-select none
   &__toggle
     z-index 1
     position absolute
